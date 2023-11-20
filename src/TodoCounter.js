@@ -1,7 +1,7 @@
 function TodoCounter({total, completed}) {
     return(
       <h1 className="TodoCounter">
-        Has competado <span>{completed}</span> de <span>{total}</span> tareas
+        You've completed <span>{completed}</span> of <span>{total}</span> tasks.
       </h1>
     );
   }

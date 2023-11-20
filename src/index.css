@@ -65,7 +65,7 @@ h1 {
   text-decoration: line-through;
 }
 
-.Icon {
+.Icon-container {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -77,21 +77,28 @@ h1 {
   /* background-color: #CCC; */
 }
 
-.Icon-check {
+.Icon-container-check {
   position: absolute;
   left: 12px;
 }
-.Icon-check--active {
-  color: #4caf50;
+.Icon-container-check--active  .Icon-svg {
+  fill: #4caf50;
 }
 
-.Icon-delete {
+.Icon-container-delete {
   position: absolute;
   top: -24px;
   right: 0;
 }
-.Icon-delete:hover {
-  color: red;
+.Icon-container-delete:hover .Icon-svg {
+  fill: red;
+}
+.Icon-container-check:hover .Icon-svg {
+  fill: green;
+}
+.Icon-svg {
+  width: 24px;
+  height: 24px;
 }
 .TodoList {
   margin: 0;

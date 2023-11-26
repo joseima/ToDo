@@ -1,41 +1,22 @@
 import React from 'react';
 
-import { TodoCounter } from './TodoCounter';
-import { TodoSearch } from './TodoSearch';
-import { TodoList } from './TodoList';
-import { TodoItem } from './TodoItem';
-import { CreateTodoButton } from './CreateTodoButton';
+import { TodoCounter } from '../TodoCounter';
+import { TodoSearch } from '../TodoSearch';
+import { TodoList } from '../TodoList';
+import { TodoItem } from '../TodoItem';
+import { CreateTodoButton } from '../CreateTodoButton';
+import { useLocalStorage } from './useLocalStorage';
 import './App.css';
 
-// const defaultTodos = [
-//   {text: 'Cortar cebolla', completed: true},
-//   {text: 'Pelar patatas', completed: false},
-//   {text: 'Rallar Zanahoria', completed: true},
-//   {text: 'Cortar tomates', completed: false},
-//   {text: 'Pasear el perro', completed: false},
-//   {text: 'Bañar al gato', completed: true},
-//   {text: 'Saludar a vecino', completed: true},
-//   {text: 'Acogotar el ganso', completed: false}
-// ];
 
-// localStorage.setItem('TODOS_V1', JSON.stringify(defaultTodos));
 
 function App() {
 
-  const localStorageTodos = localStorage.getItem('TODOS_V1');
-  let parsedTodos;
-
-  if (!localStorageTodos) {
-    localStorage.setItem('TODOS_V1',JSON.stringify([]));
-    parsedTodos = [];
-  } else {
-    parsedTodos = JSON.parse(localStorageTodos);
-  }
+  const {item: todos, saveItem: saveTodos, loading, error } = useLocalStorage('TODOS_V1', []);
 
   const [searchValue, setSearchValue] = React.useState('');
-  console.log(searchValue);
 
-  const [todos, setTodos] = React.useState(parsedTodos);
+
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
 
@@ -46,13 +27,6 @@ function App() {
       return todoText.includes(searchText);
     }
   );
-
-
-  const saveTodos = (newTodos) => {
-    localStorage.setItem('TODOS_V1',JSON.stringify(newTodos));
-    setTodos(newTodos);
-  }
-
 
 const completeTodo = (text)=>  {
   const newTodos = [...todos];
@@ -81,6 +55,11 @@ const deleteTodo = (text)=>  {
         setSearchValue={setSearchValue}  
       />
       <TodoList>
+        {loading &&   <p>Loading...</p>}
+        {error &&   <p>There's been an error</p>}
+        {(!loading && searchedTodos.length === 0) &&  <p>Add your tasks</p>}
+
+
         {searchedTodos.map(todo => (
           <TodoItem 
             key={todo.text} 

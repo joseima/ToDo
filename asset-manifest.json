@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Users/josei/Documents/General/Development/react/curso-react-intro/build/static/css/main.60dde766.css",
+    "main.js": "/Users/josei/Documents/General/Development/react/curso-react-intro/build/static/js/main.ea3a971a.js",
+    "index.html": "/Users/josei/Documents/General/Development/react/curso-react-intro/build/index.html",
+    "static/media/delete.svg": "/Users/josei/Documents/General/Development/react/curso-react-intro/build/static/media/delete.7018c4465589031bd51c8efbe21df9ca.svg",
+    "static/media/check.svg": "/Users/josei/Documents/General/Development/react/curso-react-intro/build/static/media/check.e9a948bba52a34123d2ed7aeda0ea495.svg",
+    "main.60dde766.css.map": "/Users/josei/Documents/General/Development/react/curso-react-intro/build/static/css/main.60dde766.css.map",
+    "main.ea3a971a.js.map": "/Users/josei/Documents/General/Development/react/curso-react-intro/build/static/js/main.ea3a971a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60dde766.css",
+    "static/js/main.ea3a971a.js"
+  ]
+}

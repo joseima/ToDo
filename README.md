@@ -1,7 +1,9 @@
 <<<<<<< HEAD
 #Task Manager
 
-Mange your ouwn daiy agenda adding and completing tasks in a dinamic way using local storage.
+https://joseima.github.io/ToDo/
+
+Mange your own daiy agenda adding and completing tasks in a dinamic way using local storage.
 
 Pure React aplication
 

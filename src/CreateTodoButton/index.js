@@ -9,7 +9,7 @@ function CreateTodoButton({setOpenModal}) {
           setOpenModal(state => !state);
         }
       }
-    >+</button>
+    >Add new task</button>
   );
 }
 

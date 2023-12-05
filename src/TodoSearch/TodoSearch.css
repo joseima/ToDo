@@ -1,21 +1,22 @@
 .TodoSearch {
-  background: #F9FBFC;
-  border-radius: 2px;
-  border: 2px solid #202329;
-  margin: 0 24px;
-  height: 64px;
+  display: block;
+  background: #3559d8;
+  border-radius: 20px;
+  border: none;
+  height: 60px;
   width: calc(100% - 62px);
-  font-size: 24px;
+  margin: 0 auto;
+  font-size: 18px;
   text-align: center;
-  font-family: 'Montserrat';
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
-  color: #1E1E1F;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+  color: #fff;
+  box-shadow: inset 0px 0px 25px 8px rgba(34, 61, 160, 0.6);
 }
 
 .TodoSearch::placeholder {
-  color: #A5A5A5;
-  font-family: 'Montserrat';
+  color: rgb(255, 162, 0);
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
 

@@ -1,11 +1,17 @@
 .TodoItem {
-  background-color: #FAFAFA;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 24px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  text-align: center;
+  padding: 10px;
+  font-weight: normal;
+  background-color: #0a155a;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 0 rgba(10,21,90,.6);
+  height: auto;
+  margin: 20px auto;
+  color: #fff;
 }
 
 .TodoItem-p {

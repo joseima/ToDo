@@ -3,7 +3,7 @@
 
 https://joseima.github.io/ToDo/
 
-Mange your ouwn daiy agenda adding and completing tasks in a dinamic way using local storage.
+Mange your own daiy agenda adding and completing tasks in a dinamic way using local storage.
 
 Pure React aplication
 
